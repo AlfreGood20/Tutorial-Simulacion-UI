@@ -1,8 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Example from "./pages/example";
 import Inicio from "./pages/Inicio";
+import Modulo_1 from "./pages/Modulo_1";
+import Modulo_2 from "./pages/Modulo_2";
+import Modulo_3 from "./pages/Modulo_3";
+import Modulo_4 from "./pages/Modulo_4";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,8 +15,12 @@ function App() {
       <div className="pt-10">
         <Routes>
           <Route path="/" element={<Inicio/>}/>
-          <Route path="/example" element={<Example />} />
+          <Route path="/modulo-1" element={<Modulo_1/>} />
+          <Route path="/modulo-2" element={<Modulo_2/>} />
+          <Route path="/modulo-3" element={<Modulo_3/>} />
+          <Route path="/modulo-4" element={<Modulo_4/>} />
         </Routes>
+
       </div>
     </Router>
   );

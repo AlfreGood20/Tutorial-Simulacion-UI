@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import Card, { CardHome } from "../components/Card";
+import Footer from "../components/Footer";
 
 export default function Inicio() {
   return (
         <>
-            <div className="flex flex-col md:w-full md:h-[560px] bg-slate-200 relative pt-5 border-black border-b border-gray-400 overflow-hidden">
+            <div className="flex flex-col md:w-full md:h-[566px] bg-slate-200 relative pt-5 border-black border-b border-gray-400 overflow-hidden">
 
                 <h1 className="animate-bounce mt-20 ml-5 text-center text-6xl md:text-9xl font-bold bg-gradient-to-r from-gray-400 via-gray-600 to-gray-800 bg-clip-text text-transparent">
                     Simulación
@@ -25,24 +26,28 @@ export default function Inicio() {
 
             <section className="md:flex-1 pt-10" id="temas">
 
-                <h1 className="text-center font-extrabold text-4xl mb-20">Temas</h1>
+                <h1 className="text-center font-extrabold text-4xl mb-15 mt-10">Temas</h1>
 
                 <div className="flex flex-row justify-center gap-5 mx-3">
 
-                    <Link to='/example'>
+                    <Link to='/modulo-1'>
                         <CardHome
                             titulo="Introduccion a la simulación"
                             contenido="Introducción a los conceptos básicos de la simulación, su metodología y aplicación en el análisis de sistemas reales."
                             img="/imgs/MODULO 1.png"
-                        />
+                        >
+                            
+                        </CardHome>
                     </Link>
 
-                    <Link to='/example'>
+                    <Link to='/modulo-2'>
                         <CardHome
                             titulo="Números pseudoaleatorios"
                             contenido="Estudio de la generación y validación de números pseudoaleatorios para su uso en modelos de simulación."
                             img="/imgs/MODULO 2.jpg"
-                        />
+                        >
+                           
+                        </CardHome>
                     </Link>
 
                     <Link to='/example'>
@@ -51,7 +56,9 @@ export default function Inicio() {
                             titulo="Generación de variables aleatorias"
                             contenido="Generación de variables aleatorias y modelado de distribuciones estadísticas para simulaciones."
                             img="/imgs/MODULO 3.jpg"
-                        />
+                        >
+                            
+                        </CardHome>
                     
                     </Link>
     
@@ -67,9 +74,9 @@ export default function Inicio() {
 
             </section>
 
-            <footer className="w-full bg-slate-200 mt-20">
-                <h1 className="text-center">Todos los derechos reservados.</h1>
-            </footer>
+            <Footer
+            ></Footer>
+
         </>
     );
 }

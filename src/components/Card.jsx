@@ -9,9 +9,11 @@ export function CardHome(props) {
         <img className="w-35 h-35 rounded-lg" src={props.img} alt={props.titulo} />
       </div>
 
-      <p className="text-sm text-center mt-3 overflow-auto max-h-24 w-full">
+      <p className="text-sm text-center mt-3 overflow-auto max-h-24 w-full ">
         {props.contenido}
       </p>
+
+      {props.children}
     </div>
   )
 }
@@ -24,4 +26,3 @@ export default function Card(props) {
     </div>
   )
 }
-
