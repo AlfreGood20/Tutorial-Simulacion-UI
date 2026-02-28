@@ -1,5 +1,9 @@
-
+@import "tailwindcss";
 
 .title-subtema{
     @apply text-lg font-semibold mt-3
+}
+
+.btn-side{
+    @apply cursor-pointer mt-5 hover:border-none hover:font-bold hover:underline
 }
