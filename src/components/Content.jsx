@@ -16,3 +16,13 @@ export default function Content(props) {
     </section>
   )
 }
+
+export function ContentEmpety(props){
+  return(
+    <section className='bg-white border border-gray-300 rounded-lg p-3 overflow-y-auto md:h-135 md:w-260 shadow-md'>
+      <div className='flex flex-col'>
+        {props.children}
+      </div>
+    </section>
+  )
+}

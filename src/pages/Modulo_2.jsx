@@ -22,14 +22,10 @@ export default function Modulo_2() {
     <MainContent>
       <Sidebar>
 
-        {/* <button className='btn-side'>Introducción</button>
+        <button className='btn-side'>Introducción</button>
         <button className='btn-side'>Algoritmo de cuadrados medios</button>
         <button className='btn-side'>Algorimo de productos medios</button>
-        <button className='btn-side'>Algorimo de multiplicador constante</button> */}
-
-        <ul className='list-item'>
-          <li><button className='btn-side'>Introducción</button></li>
-        </ul>
+        <button className='btn-side'>Algorimo de multiplicador constante</button> 
 
       </Sidebar>
 
