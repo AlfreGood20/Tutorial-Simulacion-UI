@@ -10,3 +10,11 @@ export function ButtomNav(props) {
     </Link>
   )
 }
+
+export function ButtonLinkCustom(props){
+  return(
+    <Link className={`${props.estilo}`} to={props.to}>
+      {props.children}
+    </Link>
+  )
+}

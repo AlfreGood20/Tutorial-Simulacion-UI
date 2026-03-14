@@ -18,7 +18,7 @@ export default function Navbar() {
             </ButtomNav>
           </li>
           <li>
-            <ButtomNav to="/example">
+            <ButtomNav to="/">
               Temas
             </ButtomNav>
           </li>
