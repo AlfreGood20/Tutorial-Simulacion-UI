@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 export default function Inicio() {
   return (
         <>
-            <div className="flex flex-col md:w-full md:h-[566px] bg-slate-200 relative pt-5 border-black border-b border-gray-400 overflow-hidden">
+            <div className="flex flex-col md:w-full md:h-[566px] bg-slate-200 relative pt-5  border-b border-gray-400 overflow-x-auto">
 
                 <h1 className="animate-bounce mt-20 ml-5 text-center text-6xl md:text-9xl font-bold bg-gradient-to-r from-gray-400 via-gray-600 to-gray-800 bg-clip-text text-transparent">
                     Simulación
