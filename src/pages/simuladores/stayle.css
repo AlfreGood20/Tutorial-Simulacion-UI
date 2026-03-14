@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+.label-sm{
+    @apply mt-2 font-bold
+}
+
+.input-sm{
+    @apply border border-gray-300 rounded-md focus:border-2 focus:border-blue-300 focus:outline-none
+}
+
+.table-head{
+    @apply border border-gray-300 px-10
+}
+
+.table-body{
+    @apply border border-gray-300 text-center
+}
+
+.div-table{
+    @apply mt-10 flex flex-col justify-center items-center
+}
