@@ -6,7 +6,7 @@ import Modulo_1 from "./pages/Modulo_1";
 import Modulo_2 from "./pages/Modulo_2";
 import Modulo_3 from "./pages/Modulo_3";
 import Modulo_4 from "./pages/Modulo_4";
-import Footer from "./components/Footer";
+
 
 function App() {
   return (
@@ -20,7 +20,6 @@ function App() {
           <Route path="/modulo-3" element={<Modulo_3/>} />
           <Route path="/modulo-4" element={<Modulo_4/>} />
         </Routes>
-
       </div>
     </Router>
   );
