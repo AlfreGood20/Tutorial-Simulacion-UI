@@ -12,6 +12,26 @@ export default function Modulo_1() {
   const [leccion, setLeccion] = useState("introduccion");
   const [mostrarRecursos, setMostrarRecursos] = useState(false);
 
+  const setLeccionGlobal = (leccion) => {
+    if(mostrarRecursos){
+      setMostrarRecursos(false);
+    }
+    setLeccion(leccion);
+  }
+
+  const contentRecursos = () => {
+    return <ContentEmpety>
+              <h1 className='mt-3 mb-5 font-extrabold text-center'>Más recursos</h1>
+              <Iframe link="https://www.youtube.com/embed/VNtM86KUCjE" />
+
+              <Iframe link="https://www.youtube.com/embed/LuTzKArjEIg"/>
+
+              <Iframe link="https://www.youtube.com/embed/5Of2T8ryxFE" />
+
+              <Iframe link="https://www.youtube.com/embed/MkEHVwHm55g" />
+          </ContentEmpety>
+  }
+
   useEffect(() => {
     fetch(`/docs/modulo_1/${leccion}.md`) 
       .then((res) => res.text())
@@ -25,24 +45,24 @@ export default function Modulo_1() {
 
         <Sidebar>
           <div className='mt-10'>
-              <button className='btn-side' onClick={() => {if(mostrarRecursos){setMostrarRecursos(false)}setLeccion("introduccion")}}>
+              <button className='btn-side' onClick={() => setLeccionGlobal("introduccion")}>
                 Introduccion
               </button>
           </div>
 
-          <button className='btn-side' onClick={() => {if(mostrarRecursos){setMostrarRecursos(false)} setLeccion("conceptos_basicos")}}>
+          <button className='btn-side' onClick={() => setLeccionGlobal("conceptos_basicos")}>
             Conceptos basicos
           </button>
 
-          <button className='btn-side' onClick={() => {if(mostrarRecursos){setMostrarRecursos(false)} setLeccion("metodologia")}}>
+          <button className='btn-side' onClick={() => setLeccionGlobal("metodologia")}>
             Metodologia
           </button>
           
-          <button className='btn-side' onClick={() => {if(mostrarRecursos){setMostrarRecursos(false)}  setLeccion("etapas_proyecto")}}>
+          <button className='btn-side' onClick={() => setLeccionGlobal("etapas_proyecto")}>
             Etapas de un proyecto
           </button>
 
-          <button className='btn-side' onClick={() => {if(mostrarRecursos){setMostrarRecursos(false)}  setLeccion("elementos_basicos")}}>
+          <button className='btn-side' onClick={() => setLeccionGlobal("elementos_basicos")}>
             Elementos básicos
           </button>
 
@@ -61,22 +81,7 @@ export default function Modulo_1() {
 
         </Sidebar>
 
-        {mostrarRecursos ?
-         (
-          <ContentEmpety>
-
-            <h1 className='mt-3 mb-5 font-extrabold text-center'>Más recursos</h1>
-            <Iframe link="https://www.youtube.com/embed/VNtM86KUCjE" />
-
-            <Iframe link="https://www.youtube.com/embed/LuTzKArjEIg"/>
-
-            <Iframe link="https://www.youtube.com/embed/5Of2T8ryxFE" />
-
-            <Iframe link="https://www.youtube.com/embed/MkEHVwHm55g" />
-
-          </ContentEmpety>
-          ) : (<Content>{content}</Content>)
-        }
+        {mostrarRecursos ? contentRecursos() : (<Content>{content}</Content>)}
         
       </MainContent>
     </>
