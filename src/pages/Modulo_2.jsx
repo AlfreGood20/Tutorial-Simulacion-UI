@@ -25,6 +25,18 @@ export default function Modulo_2() {
       setEjercicio(simulador);
     }
 
+    const deplegable = (side) =>{
+      if(side != mostrarSide){
+        return (<svg class="w-6 h-6 text-gray-800 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/>
+            </svg>)
+      }
+
+      return (<svg class="w-6 h-6 text-gray-800 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+            </svg>)
+    }
+
     const simuladores = {
       "cuadrados medios" : <CuadradoMedios />,
       "productos medios" : <ProductosMedios />,
@@ -46,11 +58,17 @@ export default function Modulo_2() {
       <Sidebar>
 
         <div className='mt-10'>
-          <button className='btn-side' onClick={() => {setLeccion("introduccion"); setSide(""); setEjercicio("")}}>Introducción</button>
+          <button className='btn-side' onClick={() => {setLeccion("introduccion"); setSide(""); setEjercicio("")}}>
+            Introducción
+          </button>
         </div>
 
         <h1 className='ml-5 font-extrabold text-blue-600'>Algoritmos</h1>
-        <button className='btn-side ml-8' onClick={() => setSide("no congruencial")}>No Congruencial</button>
+        <button 
+          className={`${mostrarSide == "no congruencial" ? 'ml-8 btn-side-select flex gap-3':'ml-8 btn-side flex gap-3'}`}
+          onClick={() => {setSide(mostrarSide != 'no congruencial' ? "no congruencial":''); }}>
+          No Congruencial {deplegable('no congruencial')}
+        </button>
 
         {mostrarSide == "no congruencial" && mostrarSide != "" &&
           <>
@@ -77,11 +95,15 @@ export default function Modulo_2() {
           </>
         }
 
-        <button className='btn-side ml-8' onClick={() => setSide("congruencial")}>Congruencial</button>
+        <button 
+          className={`${mostrarSide == "congruencial" ? 'ml-8 btn-side-select flex gap-3':'ml-8 btn-side flex gap-3'}`} 
+          onClick={() => {setSide(mostrarSide != 'congruencial' ? "congruencial":'');}}>
+          Congruencial {deplegable('congruencial')}
+        </button>
 
         {mostrarSide == "congruencial" && mostrarSide != "" &&
           <>
-            <h1 className='ml-12 font-extrabold text-red-600'>No lineales</h1>
+            <h1 className='ml-12 mt-2 font-extrabold text-red-600'>No lineales</h1>
             <button className='btn-side ml-15'>Cuadratico</button>
 
             <button className='btn-side ml-25' onClick={() => setSimuladorGlobal("cuadratico")}>
@@ -99,7 +121,7 @@ export default function Modulo_2() {
             </button>
 
 
-            <h1 className='ml-12 font-extrabold text-red-600'>Lineales</h1>
+            <h1 className='ml-12 mt-2 font-extrabold text-red-600'>Lineales</h1>
             <button className='btn-side ml-15'>Mixto</button>
             <button className='btn-side ml-25' onClick={() => setSimuladorGlobal("mixto")}>
               Simulador
