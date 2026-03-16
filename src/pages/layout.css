@@ -5,5 +5,5 @@
 }
 
 .btn-side{
-    @apply cursor-pointer mt-2 hover:border-none hover:font-bold hover:underline
+    @apply cursor-pointer mt-2 hover:border-none hover:font-bold
 }
