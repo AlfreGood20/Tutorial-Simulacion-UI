@@ -30,7 +30,7 @@ export default function ProductosMedios() {
       const multiplicado = xCero * xN;
       const cerosIzuierda= String(multiplicado).padStart(8,'0');
       const cuatroDigitos = cerosIzuierda.substring(2,6);
-      const r_i = Number('0.'+cuatroDigitos);
+      const r_i = '0.'+cuatroDigitos;
 
 
       resultadoTemp.push({
@@ -93,9 +93,10 @@ export default function ProductosMedios() {
               body={
                 <>
                   {resultados.length === 0 &&
-                    Array.from({ length: 8 }).map((_, i) => (
+                    Array.from({ length: 6 }).map((_, i) => (
                       <tr key={i}>
                         <td className='table-body text-center'>{i}</td>
+                        <td className='table-body'></td>
                         <td className='table-body'></td>
                         <td className='table-body'></td>
                         <td className='table-body'></td>

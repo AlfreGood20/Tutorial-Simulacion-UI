@@ -25,7 +25,7 @@ export default function CuadradoMedios() {
       let x2str = x2.toString().padStart(8, '0');
       let cuatroDigitos = x2str.substring(2, 6); 
       let xn1 = cuatroDigitos;
-      let ri = Number('0.' + cuatroDigitos);
+      let ri = '0.' + cuatroDigitos;
 
       resultadosTemp.push({
         n: i,
@@ -79,7 +79,7 @@ export default function CuadradoMedios() {
           body={
             <>
               {resultados.length === 0 &&
-                Array.from({ length: 10 }).map((_, i) => (
+                Array.from({ length: 6 }).map((_, i) => (
                   <tr key={i}>
                     <td className='table-body text-center'>{i}</td>
                     <td className='table-body'></td>
