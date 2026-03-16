@@ -9,7 +9,7 @@ import rehypeRaw from 'rehype-raw'
 
 export default function Content(props) {
   return (
-    <section className='markdown-body p-10 bg-white border border-gray-300 rounded-lg overflow-y-auto md:w-auto shadow-md'>
+    <section className='markdown-body p-10 bg-white border border-gray-300 rounded-lg overflow-y-auto md:w-1000 md:h-auto shadow-lg'>
       <ReactMarkdown
         remarkPlugins={[remarkMath, remarkGfm]}
         rehypePlugins={[rehypeKatex, rehypeRaw]}>
@@ -21,7 +21,7 @@ export default function Content(props) {
 
 export function ContentEmpety(props){
   return(
-    <section className='bg-white border p-3 border-gray-300 rounded-lg overflow-y-auto md:w-890 shadow-md'>
+    <section className='bg-white border p-5 border-gray-300 rounded-lg overflow-y-auto md:w-1000 md:h-130 shadow-lg'>
       <div className='flex flex-col'>
         {props.children}
       </div>

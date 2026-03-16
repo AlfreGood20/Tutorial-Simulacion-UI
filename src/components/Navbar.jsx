@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './layout.css';
 import { ButtomNav } from './Button';
+import { HashLink } from 'react-router-hash-link';
 
 export default function Navbar() {
   return (
@@ -18,9 +19,9 @@ export default function Navbar() {
             </ButtomNav>
           </li>
           <li>
-            <ButtomNav to="/">
+            <HashLink smooth to="/#temas" className="border-none rounded-lg px-3 py-2 hover:bg-gray-300">
               Temas
-            </ButtomNav>
+            </HashLink>
           </li>
         </ul>
 
