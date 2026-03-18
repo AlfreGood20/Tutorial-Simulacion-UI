@@ -46,15 +46,15 @@ export default function MultiplicadorConstante() {
     <ContentEmpety>
       <form onSubmit={recibir} className='flex flex-col'>
         <label className='label-sm'>Semilla X0:</label>
-        <input name='semilla' onChange={(e) => {setSemilla(e.target.value); setAdvertirSemilla(e.target.value <= 999);}} className='input-sm'/>
+        <input type='number' name='semilla' onChange={(e) => {setSemilla(e.target.value); setAdvertirSemilla(e.target.value <= 999);}} className='input-sm'/>
         {advertirSemilla && <p className='text-sm font-bold text-red-600'>La semilla tiene que ser mayor o igual a 4 digitos</p> }
 
         <label className='label-sm'>a (constante):</label>
-        <input name='constante' onChange={(e) => {setConstante(e.target.value); setAdvertirConstante(e.target.value <= 999);}} className='input-sm'/>
+        <input type='number' name='constante' onChange={(e) => {setConstante(e.target.value); setAdvertirConstante(e.target.value <= 999);}} className='input-sm'/>
         {advertirConstante && <p className='text-sm font-bold text-red-600'>La constante tiene que ser mayor o igual a 4 digitos</p> }
 
         <label className='label-sm'>n (iteraciones):</label>
-        <input name='iteraciones' className='input-sm'/>
+        <input type='number' name='iteraciones' className='input-sm'/>
 
         <div className='flex flex-row gap-3 w-full'>
 

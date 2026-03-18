@@ -53,16 +53,16 @@ export default function ProductosMedios() {
     <ContentEmpety>
         <form onSubmit={recibir} className='flex flex-col'>
             <label className='label-sm'>Semilla X0:</label>
-            <input onChange={(e) => {setSemillaCero(e.target.value); setAdvertirXCero(e.target.value <= 999)}} className='input-sm' name='semillaCero'/>
+            <input type='number' onChange={(e) => {setSemillaCero(e.target.value); setAdvertirXCero(e.target.value <= 999)}} className='input-sm' name='semillaCero'/>
             {advertirXCero&& <p className='text-sm font-bold text-red-600'>La semilla x0 tiene que ser mayor o igual a 4 digitos</p> }
             
             <label className='label-sm'>Semilla X1:</label>
-            <input onChange={(e) => {setSemillaOne(e.target.value); setAdvertirXOne(e.target.value <= 999)}} className='input-sm' name='semillaOne'/>
+            <input type='number' onChange={(e) => {setSemillaOne(e.target.value); setAdvertirXOne(e.target.value <= 999)}} className='input-sm' name='semillaOne'/>
             {advertirXOne&& <p className='text-sm font-bold text-red-600'>La semilla x1 tiene que ser mayoro igual a 4 digitos</p> }
 
 
             <label className='label-sm'>n (iteraciones):</label>
-            <input className='input-sm' name='iteraciones'/>
+            <input type='number' className='input-sm' name='iteraciones'/>
 
             <div className='flex flex-row gap-3 w-full'>
 

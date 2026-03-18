@@ -7,6 +7,7 @@ import CuadradoMedios from './simuladores/CuadradoMedios';
 import ProductosMedios from './simuladores/ProductosMedios';
 import MultiplicadorConstante from './simuladores/MultiplicadorConstante'
 import Cuadratico from './simuladores/Cuadratico';
+import BlumBlumShub from './simuladores/BlumBlumShub';
 
 export default function Modulo_2() {
 
@@ -41,7 +42,8 @@ export default function Modulo_2() {
       "cuadrados medios" : <CuadradoMedios />,
       "productos medios" : <ProductosMedios />,
       "multiplicador constante":<MultiplicadorConstante />,
-      "cuadratico":<Cuadratico />
+      "cuadratico":<Cuadratico />,
+      "blum blum y shub":<BlumBlumShub />
     }
 
     useEffect(() => {

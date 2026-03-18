@@ -44,23 +44,23 @@ export default function Cuadratico() {
         <ContentEmpety>
             <form onSubmit={recibir} className='flex flex-col'>
                 <label className='label-sm'>Semilla X0:</label>
-                <input name='semilla' className='input-sm'/>
+                <input typeof='number' name='semilla' className='input-sm'/>
 
                 <div className='flex flex-wrap gap-5 mt-3'>
                     <label className='label-sm'>a (constante):</label>
-                    <input name='a' className='input-sm'/>
+                    <input typeof='number' name='a' className='input-sm'/>
 
                     <label className='label-sm'>b (constante):</label>
-                    <input name='b' className='input-sm'/>
+                    <input typeof='number' name='b' className='input-sm'/>
 
                     <label className='label-sm'>c (constante):</label>
-                    <input name='c' className='input-sm'/>
+                    <input typeof='number' name='c' className='input-sm'/>
 
                     <label className='label-sm'>m (modulo):</label>
-                    <input name='m' className='input-sm'/>
+                    <input typeof='number' name='m' className='input-sm'/>
 
                     <label className='label-sm'>n (iteraciones):</label>
-                    <input name='n' className='input-sm'/>
+                    <input typeof='number' name='n' className='input-sm'/>
                 </div>
 
 
